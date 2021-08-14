@@ -60,12 +60,21 @@ namespace MediaPipe.HandPose {
             _mainUI.texture = _webcam.Texture;
             Debug.Log("POSITION-> " + getPosition());
 
-            if(getPosition() == 1)
+            if (getPosition() == 1)
                 playLightning(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
             else if (getPosition() == 2)
                 playFire(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
             else if (getPosition() == 3)
                 playSnow(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
+            else if (getPosition() == 4)
+            {
+                playSnow(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
+                playLightning(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Thumb4));
+            }else if (getPosition() == 5)
+            {
+                playFire(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Middle4));
+                playLightning(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
+            }
 
 
         }
