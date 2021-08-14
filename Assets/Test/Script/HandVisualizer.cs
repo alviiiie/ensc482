@@ -19,8 +19,6 @@ namespace MediaPipe.HandPose {
         [SerializeField] ParticleSystem Snow = null;
         [SerializeField] ParticleSystem Fire = null;
 
-        //[SerializeField] RawImage _cropUI = null;
-
         #endregion
 
         #region Private members
@@ -34,7 +32,9 @@ namespace MediaPipe.HandPose {
 
         void Start()
         {
+            //MediaPipe pipeline
             _pipeline = new HandPipeline(_resources);
+            //Hand Visualization
             _material = (new Material(_keyPointShader),
                          new Material(_handRegionShader));
 
