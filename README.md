@@ -11,22 +11,22 @@ to transition, that works and will not confused the system. If Gesture -1 is use
 Gesture 1 is shown again.
 
 To use the program, we have 7 different gestures:
-Gesture -1: Open hand, all fingers up
-Gesture 0: Fist, all fingers down
-Guesture 1: Closed hand with only pinky up
-Gesture 2: Index and Middle finger up, the rest down
-Gesture 3: Thumb and Pinky up, the rest down
-Gesture 4: Index and Pinky up, the rest down
-Gesture 5: Pinky, Ring, and Middle up, the rest down
+- Gesture -1: Open hand, all fingers up
+- Gesture 0: Fist, all fingers down
+- Guesture 1: Closed hand with only pinky up
+- Gesture 2: Index and Middle finger up, the rest down
+- Gesture 3: Thumb and Pinky up, the rest down
+- Gesture 4: Index and Pinky up, the rest down
+- Gesture 5: Pinky, Ring, and Middle up, the rest down
 
 What each gesture does:
-Gesture -1: Resets the system, no animations will occur until specified
-Gesture 0: Neutral state, does nothing
-Gesture 1: Initial signal required to start an animation
-Gesture 2: Fire animation where the hand is
-Gesture 3: Lightning animation where the hand is
-Gesture 4: Snow animation
-Gesture 5: Lightning and fire animation where the hand is
+- Gesture -1: Resets the system, no animations will occur until specified
+- Gesture 0: Neutral state, does nothing
+- Gesture 1: Initial signal required to start an animation
+- Gesture 2: Fire animation where the hand is
+- Gesture 3: Lightning animation where the hand is
+- Gesture 4: Snow animation
+- Gesture 5: Lightning and fire animation where the hand is
 
 Animations were created locally in Unity.
 
