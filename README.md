@@ -1,10 +1,10 @@
 # ensc482
 
 To run the program:
-1. Download the entire "ensc482-main" folder.
-2. Open the folder as a project in Unity
-3. In Unity, double click on "Assets/482Visualization"
-4. Hit the run button at the top of Unity
+1. Download the entire "ensc482-main" folder
+2. Open the folder as a project in Unity. In Unity click "ADD" on the top right. Our system requires version "2020.3.6f1"
+4. In Unity, double click on the file "Assets/482Visualization" in the file manager on the bottom
+5. Hit the run button at the top of Unity. This will access the webcam and start the program
 
 To start an animation, you must first use Gesture 1, then you can go to any of the animation gestures (Gestures 2-5). If you need to use Gesture 0
 to transition, that works and will not confused the system. If Gesture -1 is used, the system will be reset and will not accept animations until
