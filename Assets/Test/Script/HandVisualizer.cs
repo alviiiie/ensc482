@@ -111,45 +111,34 @@ namespace MediaPipe.HandPose {
 
             gesture = getFingers.getPosition(thumb4,thumb3,thumb2,thumb1,index4,index3,index2,index1,middle4,middle3,middle2,middle1,ring4,ring3,ring2,ring1,pinky4,pinky3,pinky2,pinky1);
             Debug.Log("POSITION-> " + gesture);
-            /*
-            if (gesture == 1)
-                playLightning(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
-            else if (gesture == 2)
-                playFire(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
-            else if (gesture == 3)
-                playSnow(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
-            else if (gesture == 4)
-            {
-                playSnow(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
-                playLightning(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Thumb4));
-            }else if (gesture == 5)
-            {
-                playFire(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Middle4));
-                playLightning(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
-            }
-            */
             if (gesture == 1){
+                //Pinky out
                 flag = 1;
             }
 
             if (flag == 1){
                 if (gesture == 2){
+                    // "Peace" sign, index and middle up
                     playFire(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
                 }
                 else if (gesture == 3){
-                    playLightning(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
+                    // Pinky and Thumb out
+                    playLightning(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Pinky4));
                 }
                 else if (gesture == 4){ 
+                    // Pinky and Index Up
                     playSnow(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Index4));
                 }
                 else if (gesture == 5){
-
+                    // "OK" sign; Index and thumb circle
+                    playLightning(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Pinky4));
+                    playFire(_pipeline.GetKeyPoint(HandPipeline.KeyPoint.Thumb4));
                 }
                 else if (gesture == 0){
-                    // Do nothing
+                    // Fist: resting state
                 }
                 else if (gesture == -1){
-                    //stop();
+                    // Open palm: Reset state
                     flag = 0;
                 }
             }
@@ -177,28 +166,22 @@ namespace MediaPipe.HandPose {
     
         public void playLightning(Vector3 index)
         {
+            //start lighting in location of pinky
             Lightning.transform.position = index;
             Lightning.Play();
         }
 
         public void playFire(Vector3 index)
         {
+            //start fire in location of index finger
             Fire.transform.position = index;
-
             Fire.Play();
         }
 
         public void playSnow(Vector3 index)
         {
-
+            //start snow
             Snow.Play();
-        }
-
-        public void stop()
-        {
-            //Lightning.Stop();
-            //Snow.Stop();
-            //Fire.Stop();
         }
     
     }
